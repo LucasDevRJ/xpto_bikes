@@ -11,13 +11,14 @@ programa
 
 		escreva("\nPrezado(a), ", nome, ". Seja muito bem-vindo(a) à nossa loja.\n")
 		escreva("Oferecemos em nossa loja venda e manutenção de bicicletas.\nPara venda de bicicletas, procure o colaborador Junior e, para manutenção, procure o colaborador Neto.\nObrigado e esperamos que tenha uma ótima experiência em nossa loja.\n\n")
+		escreva("--------------------|MENU|--------------------\n")
 		escreva("1 - Ver ofertas de bicicletas usadas.\n")
 		escreva("2 - Ver ofertas de bicicletas novas.\n")
 		escreva("3 - Ver ofertas de acessórios.\n")
 		escreva("4 - Ver novos serviços.\n")
-
 		escreva("Digite a opção desejada: ")
 		leia(opcao)
+		escreva("----------------------------------------------\n")
 
 		se (opcao == 1) {
 			escreva("\nBicicleta usada na cor azul, aro 26, com 18 marchas e com valor promocional de R$ 400,00.")
@@ -35,7 +36,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1090; 
+ * @POSICAO-CURSOR = 888; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
