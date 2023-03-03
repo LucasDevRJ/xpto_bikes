@@ -16,6 +16,8 @@ programa
 		escreva("2 - Ver ofertas de bicicletas novas.\n")
 		escreva("3 - Ver ofertas de acessórios.\n")
 		escreva("4 - Ver novos serviços.\n")
+		escreva("5 - Promoção I 10% de desconto.\n")
+		escreva("6 - Promoção II 20% de desconto.\n")
 		escreva("Digite a opção desejada: ")
 		leia(opcao)
 		escreva("----------------------------------------------\n")
@@ -28,6 +30,10 @@ programa
 			escreva("\nAcessório em oferta - Capacete de proteção por R$ 59,99.")
 		} senao se (opcao == 4) {
 			escreva("\nNovos serviços oferecidos: Lavagem completa da sua bicicleta por R$ 12,99 | Manutenção dos freios por R$ 10,99 | Troca de pneus por R$ 55,99.")
+		} senao se (opcao == 5) {
+			escreva("\nLave sua bicicleta (R$ 12,99) e realize manutenção no freio (R$ 10,99) com desconto de 10% no total do pagamento.")
+		} senao se (opcao == 6) {
+			escreva("\nTroque um pneu da bicicleta (R$ 55,99) e realize a manutenção nos freios (R$ 10,99) com 20% de desconto no total do pagamento.")
 		}
 	}
 }
@@ -36,7 +42,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 888; 
+ * @POSICAO-CURSOR = 1652; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
