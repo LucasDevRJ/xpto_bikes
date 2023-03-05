@@ -68,6 +68,8 @@ programa
 			precoTotal = precoTotal - (precoTotal * desconto)
 			
 			escreva("\nPreço total: R$ ", mat.arredondar(precoTotal, 2))
+
+			escreva("\n--------------------------------------------")
 			
 		} senao {
 			escreva("\nPrezado(a), ", nome, ". Seja muito bem-vindo(a) à nossa loja.\n")
@@ -104,7 +106,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2000; 
+ * @POSICAO-CURSOR = 800; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
