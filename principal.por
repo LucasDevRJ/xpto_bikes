@@ -5,8 +5,8 @@ programa
 	funcao inicio()
 	{
 		cadeia nome
-		inteiro opcao, contador
-		logico temDesconto
+		inteiro opcao, contador, quantidadeClientes
+		logico temDesconto, sistemaLigado
 		caracter clienteLavouBicicleta, clienteTrocouPneuBicicleta , clienteManutencaoFreios
 		real precoLavagemBicicleta, precoTrocaPneuBicicleta, precoManutencaoFreios, desconto, precoTotal
 
@@ -16,9 +16,10 @@ programa
 		precoTotal = 0.0
 		desconto = 0.0
 		temDesconto = falso
+		sistemaLigado = verdadeiro
+		quantidadeClientes = 0
 
-
-		para (contador = 1; contador <= 18; contador++) {
+		enquanto (sistemaLigado == verdadeiro) {
 			escreva("Digite o seu nome: ")
 			leia(nome)
 
@@ -74,6 +75,7 @@ programa
 				escreva("\n--------------------------------------------\n\n")
 				
 			} senao {
+				quantidadeClientes++
 				escreva("\nPrezado(a), ", nome, ". Seja muito bem-vindo(a) à nossa loja.\n")
 				escreva("Oferecemos em nossa loja venda e manutenção de bicicletas.\nPara venda de bicicletas, procure o colaborador Junior e, para manutenção, procure o colaborador Neto.\nObrigado e esperamos que tenha uma ótima experiência em nossa loja.\n\n")
 				escreva("--------------------|MENU|--------------------\n")
@@ -83,6 +85,7 @@ programa
 				escreva("4 - Ver novos serviços.\n")
 				escreva("5 - Promoção I 10% de desconto.\n")
 				escreva("6 - Promoção II 20% de desconto.\n")
+				escreva("10 - Sair.\n")
 				escreva("Digite a opção desejada: ")
 				leia(opcao)
 				escreva("----------------------------------------------\n")
@@ -99,6 +102,9 @@ programa
 					escreva("\nLave sua bicicleta (R$ 12,99) e realize manutenção no freio (R$ 10,99) com desconto de 10% no total do pagamento.\n\n")
 				} senao se (opcao == 6) {
 					escreva("\nTroque um pneu da bicicleta (R$ 55,99) e realize a manutenção nos freios (R$ 10,99) com 20% de desconto no total do pagamento.\n\n")
+				} senao se (opcao == 10) {
+					sistemaLigado = falso
+					escreva("Quantidade de clientes que usaram o sistema: ", quantidadeClientes)
 				}
 			}
 		}
@@ -109,7 +115,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 10; 
+ * @POSICAO-CURSOR = 2271; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
