@@ -6,7 +6,7 @@ programa
 	{
 		cadeia nome, produtos[3]
 		inteiro opcao, contador
-		real precos[3]
+		real precos[3], precoTotal, desconto
 		
 		escreva("Bem-vindo ao autoatendimento da bicicletaria XPTO Bikes.")
 		
@@ -60,6 +60,21 @@ programa
 				
 				escreva("\n---------------------------------------------------")
 			pare
+
+			caso 4:
+				escreva("\n--------------------|CAIXA|--------------------")
+				escreva("\nOpção 1 - Dinheiro.")
+				escreva("\nOpção 2 - Cartão.")
+				escreva("\nOpção 3 - Voltar.")
+				escreva("\n-----------------------------------------------")
+				escreva("\nEscolha a forma de pagamento: ")
+				leia(opcao)
+
+				se (opcao == 1) {
+					desconto = 10.0 / 100.0
+					precoTotal = precoTotal - (precoTotal * desconto)
+				}
+			pare
 		}
 	}
 }
@@ -68,7 +83,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2176; 
+ * @POSICAO-CURSOR = 2632; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
