@@ -4,8 +4,9 @@ programa
 	
 	funcao inicio()
 	{
-		cadeia nome
-		inteiro opcao
+		cadeia nome, produtos[3]
+		inteiro opcao, contador
+		real precos[3]
 		
 		escreva("Bem-vindo ao autoatendimento da bicicletaria XPTO Bikes.")
 		
@@ -47,6 +48,18 @@ programa
 				escreva("\nDigite sua opção desejada: ")
 				leia(opcao)
 			pare
+
+			caso 3:
+				escreva("\n--------------------|CARRINHO|--------------------")
+
+				para (contador = 0; contador < 3; contador++) {
+					escreva("\nProduto: ", produtos[contador])
+					escreva("\nPreço: R$ ", precos[contador])
+					escreva("\n")
+				}
+				
+				escreva("\n---------------------------------------------------")
+			pare
 		}
 	}
 }
@@ -55,7 +68,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1809; 
+ * @POSICAO-CURSOR = 2176; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
