@@ -21,6 +21,17 @@ programa
 		escreva("\n---------------------------------------------")
 		escreva("\nDigite sua opção desejada: ")
 		leia(opcao)
+
+		escolha (opcao) {
+			caso 1:
+				escreva("\nCódigo 101 - Bicicleta nova na cor amarela, aro 26, com 18 marchas e na promoção pelo preço de R$ 999,99.")
+				escreva("\nCódigo 102 - Bicicleta usada na cor azul, aro 26, com 18 marchas e com o valor promocional de R$ 400,00.")
+				escreva("\nCódigo 103 - Capacete de proteção por R$ 59,99.")
+				escreva("\nCódigo 104 - Freio a disco por R$ 89,99.")
+				escreva("\n8 - Adicionar ao carinho de compras.")
+				escreva("\n0 - Voltar.")
+			pare 
+		}
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -28,7 +39,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 598; 
+ * @POSICAO-CURSOR = 1133; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
