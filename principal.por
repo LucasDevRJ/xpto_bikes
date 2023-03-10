@@ -4,7 +4,7 @@ programa
 	
 	funcao inicio()
 	{
-		
+		escreva("Bem-vindo ao autoatendimento da bicicletaria XPTO Bikes.")
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -12,7 +12,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 73; 
+ * @POSICAO-CURSOR = 140; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
