@@ -88,15 +88,54 @@ programa
 				pare 
 	
 				caso 2:
-					escreva("\n--------------------|MANUTENÇÃO|--------------------")
-					escreva("\nCódigo 201 - Troca de pneu - R$ 55,99.")
-					escreva("\nCódigo 202 - Lavagem completa - R$ 12,99.")
-					escreva("\nCódigo 203 - Freio - R$ 10,99.")
-					escreva("\n8 - Adicionar ao carinho de compras - R$ 55,99.")
-					escreva("\n0 - Voltar.")
-					escreva("\n----------------------------------------------------")
-					escreva("\nDigite sua opção desejada: ")
-					leia(opcao)
+
+					enquanto (opcao != 0) {
+						escreva("\n--------------------|MANUTENÇÃO|--------------------")
+						escreva("\nCódigo 201 - Troca de pneu - R$ 55,99.")
+						escreva("\nCódigo 202 - Lavagem completa - R$ 12,99.")
+						escreva("\nCódigo 203 - Freio - R$ 10,99.")
+						escreva("\n8 - Adicionar ao carinho de compras.")
+						escreva("\n0 - Voltar.")
+						escreva("\n----------------------------------------------------")
+						escreva("\nDigite sua opção desejada: ")
+						leia(opcao)
+
+						se (opcao == 8) {
+								escreva("\nDigite o código do produto que deseja adicionar no carrinho: ")
+								leia(codigo)
+	
+								se (contador < 3) {
+									escolha (codigo) {
+										caso 201:
+											produtos[contador] = "Troca de pneu"
+											precos[contador] = 55.99
+											contador++
+											escreva("\nProduto adicionado no carrinho!")
+										pare
+		
+										caso 202:
+											produtos[contador] = "Lavagem completa"
+											precos[contador] = 12.99
+											contador++
+											escreva("\nProduto adicionado no carrinho!")
+										pare
+		
+										caso 203:
+											produtos[contador] = "Freio"
+											precos[contador] = 10.99
+											contador++
+											escreva("\nProduto adicionado no carrinho!")
+										pare
+		
+										caso contrario:
+											escreva("\nCódigo inválido!")
+									}	
+								} senao {
+									escreva("\nO carrinho está cheio!!")
+								}
+							}
+						}
+					
 				pare
 	
 				caso 3:
@@ -135,7 +174,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2713; 
+ * @POSICAO-CURSOR = 4216; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
