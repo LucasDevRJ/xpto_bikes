@@ -79,32 +79,32 @@ programa
 										caso 101:
 											produtos[contador] = "Bicicleta nova na cor amarela, aro 26, com 18 marchas"
 											precos[contador] = 999.99
-											contador++
 											precoTotal = precoTotal + precos[contador]
+											contador++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
 										caso 102:
 											produtos[contador] = "Bicicleta usada na cor azul, aro 26, com 18 marchas"
 											precos[contador] = 400.00
-											contador++
 											precoTotal = precoTotal + precos[contador]
+											contador++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
 										caso 103:
 											produtos[contador] = "Capacete de proteção"
 											precos[contador] = 59.99
-											contador++
 											precoTotal = precoTotal + precos[contador]
+											contador++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
 										caso 104:
 											produtos[contador] = "Freio a disco"
 											precos[contador] = 89.99
-											contador++
 											precoTotal = precoTotal + precos[contador]
+											contador++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
@@ -113,10 +113,8 @@ programa
 									}	
 								} senao {
 									escreva("\nO carrinho está cheio!!")
-								}
-							} senao {
-								escreva("\nOpção inválida!!")
-							}
+								} 
+							} 
 						}
 					pare 
 		
@@ -169,9 +167,7 @@ programa
 									} senao {
 										escreva("\nO carrinho está cheio!!")
 									}
-								} senao {
-									escreva("\nOpção inválida!!")
-								}
+								} 
 							}
 						
 					pare
@@ -216,7 +212,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5681; 
+ * @POSICAO-CURSOR = 3584; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
