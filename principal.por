@@ -47,10 +47,8 @@ programa
 							escreva("\nDigite o código do produto que deseja adicionar no carrinho: ")
 							leia(codigo)
 
-							se (contador >= 3) {
-								escreva("\nO carrinho já está cheio!!")
-							} senao {
-									escolha (codigo) {
+							se (contador < 3) {
+								escolha (codigo) {
 									caso 101:
 										produtos[contador] = "Bicicleta nova na cor amarela, aro 26, com 18 marchas"
 										precos[contador] = 999.99
@@ -82,6 +80,8 @@ programa
 									caso contrario:
 										escreva("\nCódigo inválido!")
 								}	
+							} senao {
+								escreva("\nO carrinho está cheio!!")
 							}
 						}
 					}
@@ -135,7 +135,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1687; 
+ * @POSICAO-CURSOR = 2713; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
