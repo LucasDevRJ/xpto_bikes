@@ -1,16 +1,17 @@
 programa
 {
-	inclua biblioteca Matematica --> mat
 	
 	funcao inicio()
 	{
 		cadeia nome, produtos[3]
 		caracter formaPagamento
-		inteiro opcao, contador, codigo
+		inteiro opcao, contador, codigo, quantidadeVendas
 		real precos[3], precoTotal, desconto, valor
 
 		precoTotal = 0.0
 		contador = 0
+		valor = 0.0
+		desconto = 0.0
 
 		escreva("Bem-vindo ao autoatendimento da bicicletaria XPTO Bikes.")
 		
@@ -39,12 +40,12 @@ programa
 				valor = valor - (valor * desconto)
 			}
 
+			escreva("\nDesconto: ", desconto * 100, "%")
 			escreva("\nValor total: R$ ", valor)
 			
 			escreva("\n--------------------------------------------------")
 		} senao {
 			faca {
-				escreva("Contador = ",contador)
 				
 				escreva("\n--------------------|MENU|--------------------")
 				escreva("\nOpção 1 - Ver promoções.")
@@ -197,14 +198,21 @@ programa
 							desconto = 10.0 / 100.0
 							precoTotal = precoTotal - (precoTotal * desconto)
 						}
+
+						escreva("\nDesconto: ", desconto * 100, "%")
+						escreva("\nValor total: R$ ", precoTotal)
+					pare
+
+					caso 5:
+						quantidadeVendas = contador
+		
+						escreva("\nNúmero de produtos vendidos: ", quantidadeVendas)
+						escreva("\nValor total das vendas: R$ ", precoTotal)
 					pare
 				}
 			
 			} enquanto (opcao != 5)
 		}
-
-		escreva("\nNúmero de produtos vendidos: ")
-		escreva("\nValor total das vendas: R$ ", precoTotal)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -212,7 +220,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5259; 
+ * @POSICAO-CURSOR = 249; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
