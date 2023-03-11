@@ -5,6 +5,7 @@ programa
 	funcao inicio()
 	{
 		cadeia nome, produtos[3]
+		caracter formaPagamento
 		inteiro opcao, contador, codigo
 		real precos[3], precoTotal, desconto, valor
 
@@ -18,12 +19,27 @@ programa
 
 		se (nome == "xptorestrito") {
 			escreva("\n--------------------|RESTRITO|--------------------")
-			escreva("Digite o nome do cliente: ")
+			escreva("\nDigite o nome do cliente: ")
 			leia(nome)
 
-			escreva("Digite o valor gasto pelo cliente: R$ ")
+			escreva("\nDigite o valor gasto pelo cliente: R$ ")
 			leia(valor)
 
+			escreva("\nFormas de pagamento:\nD - Dinheiro\nC - Cartão\nDigite a forma de pagamento feita pelo cliente: ")
+			leia(formaPagamento)
+
+			enquanto (formaPagamento != 'D' e formaPagamento != 'C') {
+				escreva("\nDigite somente a letra D ou C!!")
+				escreva("\nFormas de pagamento:\nD - Dinheiro\nC - Cartão\nDigite a forma de pagamento feita pelo cliente: ")
+				leia(formaPagamento)
+			}
+
+			se (formaPagamento == 'D') {
+				desconto = 10.0 / 100.0
+				valor = valor - (valor * desconto)
+			}
+
+			escreva("\nValor total: R$ ", valor)
 			
 			escreva("\n--------------------------------------------------")
 		} senao {
@@ -186,7 +202,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 563; 
+ * @POSICAO-CURSOR = 1132; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
