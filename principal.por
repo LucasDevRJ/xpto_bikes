@@ -5,18 +5,20 @@ programa
 	funcao inicio()
 	{
 		cadeia nome, produtos[3]
-		inteiro opcao, contador
+		inteiro opcao, contador, codigo
 		real precos[3], precoTotal, desconto
 
 		precoTotal = 0.0
+		contador = 0
 
-		faca {
-
-			escreva("Bem-vindo ao autoatendimento da bicicletaria XPTO Bikes.")
+		escreva("Bem-vindo ao autoatendimento da bicicletaria XPTO Bikes.")
 		
-			escreva("\nDigite o seu nome: ")
-			leia(nome)
-	
+		escreva("\nDigite o seu nome: ")
+		leia(nome)
+		
+		faca {
+			escreva("Contador = ",contador)
+			
 			escreva("\n--------------------|MENU|--------------------")
 			escreva("\nOpção 1 - Ver promoções.")
 			escreva("\nOpção 2 - Solicitar serviço de manutenção.")
@@ -29,17 +31,60 @@ programa
 	
 			escolha (opcao) {
 				caso 1:
-					escreva("\n--------------------|PROMOÇÕES|--------------------")
-					escreva("\nCódigo 101 - Bicicleta nova na cor amarela, aro 26, com 18 marchas e na promoção pelo preço de R$ 999,99.")
-					escreva("\nCódigo 102 - Bicicleta usada na cor azul, aro 26, com 18 marchas e com o valor promocional de R$ 400,00.")
-					escreva("\nCódigo 103 - Capacete de proteção por R$ 59,99.")
-					escreva("\nCódigo 104 - Freio a disco por R$ 89,99.")
-					escreva("\n8 - Adicionar ao carinho de compras.")
-					escreva("\n0 - Voltar.")
-					escreva("\n--------------------------------------------------")
-					escreva("\nDigite sua opção desejada: ")
-					leia(opcao)
+					enquanto (opcao != 0) {
+						escreva("\n--------------------|PROMOÇÕES|--------------------")
+						escreva("\nCódigo 101 - Bicicleta nova na cor amarela, aro 26, com 18 marchas e na promoção pelo preço de R$ 999,99.")
+						escreva("\nCódigo 102 - Bicicleta usada na cor azul, aro 26, com 18 marchas e com o valor promocional de R$ 400,00.")
+						escreva("\nCódigo 103 - Capacete de proteção por R$ 59,99.")
+						escreva("\nCódigo 104 - Freio a disco por R$ 89,99.")
+						escreva("\n8 - Adicionar ao carinho de compras.")
+						escreva("\n0 - Voltar.")
+						escreva("\n--------------------------------------------------")
+						escreva("\nDigite sua opção desejada: ")
+						leia(opcao)
+
+						se (opcao == 8) {
+							escreva("\nDigite o código do produto que deseja adicionar no carrinho: ")
+							leia(codigo)
+
+							se (contador >= 3) {
+								escreva("\nO carrinho já está cheio!!")
+							} senao {
+									escolha (codigo) {
+									caso 101:
+										produtos[contador] = "Bicicleta nova na cor amarela, aro 26, com 18 marchas"
+										precos[contador] = 999.99
+										contador++
+										escreva("\nProduto adicionado no carrinho!")
+									pare
 	
+									caso 102:
+										produtos[contador] = "Bicicleta usada na cor azul, aro 26, com 18 marchas"
+										precos[contador] = 400.00
+										contador++
+										escreva("\nProduto adicionado no carrinho!")
+									pare
+	
+									caso 103:
+										produtos[contador] = "Capacete de proteção"
+										precos[contador] = 59.99
+										contador++
+										escreva("\nProduto adicionado no carrinho!")
+									pare
+	
+									caso 104:
+										produtos[contador] = "Freio a disco"
+										precos[contador] = 89.99
+										contador++
+										escreva("\nProduto adicionado no carrinho!")
+									pare
+	
+									caso contrario:
+										escreva("\nCódigo inválido!")
+								}	
+							}
+						}
+					}
 				pare 
 	
 				caso 2:
@@ -90,7 +135,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2745; 
+ * @POSICAO-CURSOR = 1687; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
