@@ -6,7 +6,7 @@ programa
 	{
 		cadeia nome, produtos[3]
 		inteiro opcao, contador, codigo
-		real precos[3], precoTotal, desconto
+		real precos[3], precoTotal, desconto, valor
 
 		precoTotal = 0.0
 		contador = 0
@@ -18,6 +18,13 @@ programa
 
 		se (nome == "xptorestrito") {
 			escreva("\n--------------------|RESTRITO|--------------------")
+			escreva("Digite o nome do cliente: ")
+			leia(nome)
+
+			escreva("Digite o valor gasto pelo cliente: R$ ")
+			leia(valor)
+
+			
 			escreva("\n--------------------------------------------------")
 		} senao {
 			faca {
@@ -179,7 +186,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5388; 
+ * @POSICAO-CURSOR = 563; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
