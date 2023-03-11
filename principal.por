@@ -140,24 +140,24 @@ programa
 											caso 201:
 												produtos[contador] = "Troca de pneu"
 												precos[contador] = 55.99
-												contador++
 												precoTotal = precoTotal + precos[contador]
+												contador++
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
 											caso 202:
 												produtos[contador] = "Lavagem completa"
 												precos[contador] = 12.99
-												contador++
 												precoTotal = precoTotal + precos[contador]
+												contador++
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
 											caso 203:
 												produtos[contador] = "Freio"
 												precos[contador] = 10.99
-												contador++
 												precoTotal = precoTotal + precos[contador]
+												contador++
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
@@ -212,7 +212,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3584; 
+ * @POSICAO-CURSOR = 5259; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
