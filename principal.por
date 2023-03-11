@@ -80,6 +80,7 @@ programa
 											produtos[contador] = "Bicicleta nova na cor amarela, aro 26, com 18 marchas"
 											precos[contador] = 999.99
 											contador++
+											precoTotal = precoTotal + precos[contador]
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
@@ -87,6 +88,7 @@ programa
 											produtos[contador] = "Bicicleta usada na cor azul, aro 26, com 18 marchas"
 											precos[contador] = 400.00
 											contador++
+											precoTotal = precoTotal + precos[contador]
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
@@ -94,6 +96,7 @@ programa
 											produtos[contador] = "Capacete de proteção"
 											precos[contador] = 59.99
 											contador++
+											precoTotal = precoTotal + precos[contador]
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
@@ -101,6 +104,7 @@ programa
 											produtos[contador] = "Freio a disco"
 											precos[contador] = 89.99
 											contador++
+											precoTotal = precoTotal + precos[contador]
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
@@ -110,6 +114,8 @@ programa
 								} senao {
 									escreva("\nO carrinho está cheio!!")
 								}
+							} senao {
+								escreva("\nOpção inválida!!")
 							}
 						}
 					pare 
@@ -137,6 +143,7 @@ programa
 												produtos[contador] = "Troca de pneu"
 												precos[contador] = 55.99
 												contador++
+												precoTotal = precoTotal + precos[contador]
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
@@ -144,6 +151,7 @@ programa
 												produtos[contador] = "Lavagem completa"
 												precos[contador] = 12.99
 												contador++
+												precoTotal = precoTotal + precos[contador]
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
@@ -151,6 +159,7 @@ programa
 												produtos[contador] = "Freio"
 												precos[contador] = 10.99
 												contador++
+												precoTotal = precoTotal + precos[contador]
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
@@ -160,6 +169,8 @@ programa
 									} senao {
 										escreva("\nO carrinho está cheio!!")
 									}
+								} senao {
+									escreva("\nOpção inválida!!")
 								}
 							}
 						
@@ -195,6 +206,9 @@ programa
 			
 			} enquanto (opcao != 5)
 		}
+
+		escreva("\nNúmero de produtos vendidos: ")
+		escreva("\nValor total das vendas: R$ ", precoTotal)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -202,7 +216,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1132; 
+ * @POSICAO-CURSOR = 5681; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
