@@ -237,15 +237,13 @@ programa
 						
 					pare
 
-					caso 5:
-						se (produto == 0) {
-							escreva("\nNúmero de produtos vendidos: ", quantidadeVendas)
-							escreva("\nValor total das vendas: R$ ", mat.arredondar(precoVendas, 2))
-						} senao {
-							escreva("\nFinalize as compras para poder sair!!")
-						}
-						
-					pare
+				}
+
+				se (produto == 0) {
+					escreva("\nNúmero de produtos vendidos: ", quantidadeVendas)
+					escreva("\nValor total das vendas: R$ ", mat.arredondar(precoVendas, 2))
+				} senao {
+					escreva("\nFinalize as compras para poder sair!!")
 				}
 			
 			} enquanto (opcaoPrincipal != 0)
@@ -257,7 +255,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 7840; 
+ * @POSICAO-CURSOR = 7764; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
