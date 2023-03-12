@@ -86,7 +86,6 @@ programa
 											precos[produto] = 999.99
 											precoTotal = precoTotal + precos[produto]
 											produto++
-											quantidadeVendas++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
@@ -95,7 +94,6 @@ programa
 											precos[produto] = 400.00
 											precoTotal = precoTotal + precos[produto]
 											produto++
-											quantidadeVendas++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
@@ -104,7 +102,6 @@ programa
 											precos[produto] = 59.99
 											precoTotal = precoTotal + precos[produto]
 											produto++
-											quantidadeVendas++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
@@ -113,7 +110,6 @@ programa
 											precos[produto] = 89.99
 											precoTotal = precoTotal + precos[produto]
 											produto++
-											quantidadeVendas++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
@@ -151,7 +147,6 @@ programa
 												precos[produto] = 55.99
 												precoTotal = precoTotal + precos[produto]
 												produto++
-												quantidadeVendas++
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
@@ -160,7 +155,6 @@ programa
 												precos[produto] = 12.99
 												precoTotal = precoTotal + precos[produto]
 												produto++
-												quantidadeVendas++
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
@@ -169,7 +163,6 @@ programa
 												precos[produto] = 10.99
 												precoTotal = precoTotal + precos[produto]
 												produto++
-												quantidadeVendas++
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
@@ -226,6 +219,7 @@ programa
 								}
 
 								precoVendas = precoVendas + precoTotal
+								quantidadeVendas = quantidadeVendas + produto
 
 								precoTotal = 0.0
 								desconto = 0.0
@@ -237,10 +231,12 @@ programa
 						
 					pare
 
-				}
+					caso 0:
+						escreva("\nNúmero de produtos vendidos: ", quantidadeVendas)
+						escreva("\nValor total das vendas: R$ ", mat.arredondar(precoVendas, 2))
+					pare
 
-				escreva("\nNúmero de produtos vendidos: ", quantidadeVendas)
-				escreva("\nValor total das vendas: R$ ", mat.arredondar(precoVendas, 2))
+				}
 			
 			} enquanto (opcaoPrincipal != 0)
 		}
@@ -251,7 +247,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 7591; 
+ * @POSICAO-CURSOR = 7525; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
