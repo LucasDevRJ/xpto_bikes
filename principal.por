@@ -175,15 +175,21 @@ programa
 					pare
 		
 					caso 3:
-						escreva("\n--------------------|CARRINHO|--------------------")
+
+						se (produto > 0) {
+							escreva("\n--------------------|CARRINHO|--------------------")
 		
-						para (contador = 0; contador < 3; contador++) {
-							escreva("\nProduto: ", produtos[contador])
-							escreva("\nPreço: R$ ", precos[contador])
-							escreva("\n")
+							para (contador = 0; contador < 3; contador++) {
+								escreva("\nProduto: ", produtos[contador])
+								escreva("\nPreço: R$ ", precos[contador])
+								escreva("\n")
+							}
+						
+							escreva("\n---------------------------------------------------")
+						} senao {
+							escreva("\nO carrinho está vazio!!\nAdicione produto(s) no carrinho para poder visualizar.")
 						}
 						
-						escreva("\n---------------------------------------------------")
 					pare
 		
 					caso 4:
@@ -215,7 +221,7 @@ programa
 								produto = 0
 								
 							} senao {
-								escreva("\nCarrinho está vazio!!\nAdicione produtos para poder comprar.")
+								escreva("\nCarrinho está vazio!!\nAdicione produto(s) para poder comprar.")
 							}
 						
 					pare
@@ -237,7 +243,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 6812; 
+ * @POSICAO-CURSOR = 6065; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
