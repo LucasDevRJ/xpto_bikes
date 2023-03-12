@@ -186,21 +186,27 @@ programa
 					pare
 		
 					caso 4:
-						escreva("\n--------------------|CAIXA|--------------------")
-						escreva("\nOpção 1 - Dinheiro.")
-						escreva("\nOpção 2 - Cartão.")
-						escreva("\nOpção 3 - Voltar.")
-						escreva("\n-----------------------------------------------")
-						escreva("\nEscolha a forma de pagamento: ")
-						leia(opcao)
-		
-						se (opcao == 1) {
-							desconto = 10.0 / 100.0
-							precoTotal = precoTotal - (precoTotal * desconto)
-						}
 
-						escreva("\nDesconto: ", desconto * 100, "%")
-						escreva("\nValor total: R$ ", precoTotal)
+						se (contador > 0) {
+							escreva("\n--------------------|CAIXA|--------------------")
+							escreva("\nOpção 1 - Dinheiro.")
+							escreva("\nOpção 2 - Cartão.")
+							escreva("\nOpção 3 - Voltar.")
+							escreva("\n-----------------------------------------------")
+							escreva("\nEscolha a forma de pagamento: ")
+							leia(opcao)
+			
+							se (opcao == 1) {
+								desconto = 10.0 / 100.0
+								precoTotal = precoTotal - (precoTotal * desconto)
+							}
+	
+								escreva("\nDesconto: ", desconto * 100, "%")
+								escreva("\nValor total: R$ ", precoTotal)
+							} senao {
+								escreva("\nCarrinho está vazio!!\nAdicione produtos para poder comprar.")
+							}
+						
 					pare
 
 					caso 5:
@@ -220,7 +226,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 249; 
+ * @POSICAO-CURSOR = 6590; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
