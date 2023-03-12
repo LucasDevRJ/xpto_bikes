@@ -1,5 +1,6 @@
 programa
 {
+	inclua biblioteca Matematica --> mat
 	
 	funcao inicio()
 	{
@@ -190,7 +191,7 @@ programa
 		
 							para (contador = 0; contador < 3; contador++) {
 								escreva("\nProduto: ", produtos[contador])
-								escreva("\nPreço: R$ ", precos[contador])
+								escreva("\nPreço: R$ ", mat.arredondar(precos[contador], 2))
 								escreva("\n")
 							}
 						
@@ -207,7 +208,6 @@ programa
 							escreva("\n--------------------|CAIXA|--------------------")
 							escreva("\nOpção 1 - Dinheiro.")
 							escreva("\nOpção 2 - Cartão.")
-							escreva("\nOpção 3 - Voltar.")
 							escreva("\n-----------------------------------------------")
 							escreva("\nEscolha a forma de pagamento: ")
 							leia(opcao)
@@ -218,7 +218,7 @@ programa
 							}
 	
 								escreva("\nDesconto: ", desconto * 100, "%")
-								escreva("\nValor total: R$ ", precoTotal)
+								escreva("\nValor total: R$ ", mat.arredondar(precoTotal, 2))
 
 								para (contador = produto; contador >= 0; contador--) {
 									produtos[contador] = ""
@@ -240,7 +240,7 @@ programa
 					caso 5:
 		
 						escreva("\nNúmero de produtos vendidos: ", quantidadeVendas)
-						escreva("\nValor total das vendas: R$ ", precoVendas)
+						escreva("\nValor total das vendas: R$ ", mat.arredondar(precoVendas, 2))
 					pare
 				}
 			
@@ -253,7 +253,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 7572; 
+ * @POSICAO-CURSOR = 6685; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
