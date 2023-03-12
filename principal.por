@@ -5,11 +5,11 @@ programa
 	{
 		cadeia nome, produtos[3]
 		caracter formaPagamento
-		inteiro opcao, contador, codigo, quantidadeVendas
+		inteiro opcao, contador, codigo, quantidadeVendas, produto
 		real precos[3], precoTotal, desconto, valor
 
 		precoTotal = 0.0
-		contador = 0
+		produto = 0
 		valor = 0.0
 		desconto = 0.0
 
@@ -48,6 +48,7 @@ programa
 			faca {
 				
 				escreva("\n--------------------|MENU|--------------------")
+				escreva("\nProduto = ", produto)
 				escreva("\nOpção 1 - Ver promoções.")
 				escreva("\nOpção 2 - Solicitar serviço de manutenção.")
 				escreva("\nOpção 3 - Listar carrinho de compra.")
@@ -75,37 +76,37 @@ programa
 								escreva("\nDigite o código do produto que deseja adicionar no carrinho: ")
 								leia(codigo)
 	
-								se (contador < 3) {
+								se (produto < 3) {
 									escolha (codigo) {
 										caso 101:
-											produtos[contador] = "Bicicleta nova na cor amarela, aro 26, com 18 marchas"
-											precos[contador] = 999.99
-											precoTotal = precoTotal + precos[contador]
-											contador++
+											produtos[produto] = "Bicicleta nova na cor amarela, aro 26, com 18 marchas"
+											precos[produto] = 999.99
+											precoTotal = precoTotal + precos[produto]
+											produto++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
 										caso 102:
-											produtos[contador] = "Bicicleta usada na cor azul, aro 26, com 18 marchas"
-											precos[contador] = 400.00
-											precoTotal = precoTotal + precos[contador]
-											contador++
+											produtos[produto] = "Bicicleta usada na cor azul, aro 26, com 18 marchas"
+											precos[produto] = 400.00
+											precoTotal = precoTotal + precos[produto]
+											produto++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
 										caso 103:
-											produtos[contador] = "Capacete de proteção"
-											precos[contador] = 59.99
-											precoTotal = precoTotal + precos[contador]
-											contador++
+											produtos[produto] = "Capacete de proteção"
+											precos[produto] = 59.99
+											precoTotal = precoTotal + precos[produto]
+											produto++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
 										caso 104:
-											produtos[contador] = "Freio a disco"
-											precos[contador] = 89.99
-											precoTotal = precoTotal + precos[contador]
-											contador++
+											produtos[produto] = "Freio a disco"
+											precos[produto] = 89.99
+											precoTotal = precoTotal + precos[produto]
+											produto++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
@@ -136,29 +137,29 @@ programa
 									escreva("\nDigite o código do produto que deseja adicionar no carrinho: ")
 									leia(codigo)
 		
-									se (contador < 3) {
+									se (produto < 3) {
 										escolha (codigo) {
 											caso 201:
-												produtos[contador] = "Troca de pneu"
-												precos[contador] = 55.99
-												precoTotal = precoTotal + precos[contador]
-												contador++
+												produtos[produto] = "Troca de pneu"
+												precos[produto] = 55.99
+												precoTotal = precoTotal + precos[produto]
+												produto++
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
 											caso 202:
-												produtos[contador] = "Lavagem completa"
-												precos[contador] = 12.99
-												precoTotal = precoTotal + precos[contador]
-												contador++
+												produtos[produto] = "Lavagem completa"
+												precos[produto] = 12.99
+												precoTotal = precoTotal + precos[produto]
+												produto++
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
 											caso 203:
-												produtos[contador] = "Freio"
-												precos[contador] = 10.99
-												precoTotal = precoTotal + precos[contador]
-												contador++
+												produtos[produto] = "Freio"
+												precos[produto] = 10.99
+												precoTotal = precoTotal + precos[produto]
+												produto++
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
@@ -187,7 +188,7 @@ programa
 		
 					caso 4:
 
-						se (contador > 0) {
+						se (produto > 0) {
 							escreva("\n--------------------|CAIXA|--------------------")
 							escreva("\nOpção 1 - Dinheiro.")
 							escreva("\nOpção 2 - Cartão.")
@@ -203,6 +204,16 @@ programa
 	
 								escreva("\nDesconto: ", desconto * 100, "%")
 								escreva("\nValor total: R$ ", precoTotal)
+
+								para (contador = produto; contador >= 0; contador--) {
+									produtos[contador] = ""
+									precos[contador] = 0.0
+								}
+
+								precoTotal = 0.0
+								desconto = 0.0
+								produto = 0
+								
 							} senao {
 								escreva("\nCarrinho está vazio!!\nAdicione produtos para poder comprar.")
 							}
@@ -210,7 +221,7 @@ programa
 					pare
 
 					caso 5:
-						quantidadeVendas = contador
+						quantidadeVendas = produto
 		
 						escreva("\nNúmero de produtos vendidos: ", quantidadeVendas)
 						escreva("\nValor total das vendas: R$ ", precoTotal)
@@ -226,7 +237,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 6590; 
+ * @POSICAO-CURSOR = 6812; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
