@@ -6,12 +6,14 @@ programa
 		cadeia nome, produtos[3]
 		caracter formaPagamento
 		inteiro opcao, contador, codigo, quantidadeVendas, produto
-		real precos[3], precoTotal, desconto, valor
+		real precos[3], precoTotal, precoVendas, desconto, valor
 
 		precoTotal = 0.0
 		produto = 0
 		valor = 0.0
 		desconto = 0.0
+		quantidadeVendas = 0
+		precoVendas = 0.0
 
 		escreva("Bem-vindo ao autoatendimento da bicicletaria XPTO Bikes.")
 		
@@ -83,6 +85,7 @@ programa
 											precos[produto] = 999.99
 											precoTotal = precoTotal + precos[produto]
 											produto++
+											quantidadeVendas++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
@@ -91,6 +94,7 @@ programa
 											precos[produto] = 400.00
 											precoTotal = precoTotal + precos[produto]
 											produto++
+											quantidadeVendas++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
@@ -99,6 +103,7 @@ programa
 											precos[produto] = 59.99
 											precoTotal = precoTotal + precos[produto]
 											produto++
+											quantidadeVendas++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
@@ -107,6 +112,7 @@ programa
 											precos[produto] = 89.99
 											precoTotal = precoTotal + precos[produto]
 											produto++
+											quantidadeVendas++
 											escreva("\nProduto adicionado no carrinho!")
 										pare
 		
@@ -144,6 +150,7 @@ programa
 												precos[produto] = 55.99
 												precoTotal = precoTotal + precos[produto]
 												produto++
+												quantidadeVendas++
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
@@ -152,6 +159,7 @@ programa
 												precos[produto] = 12.99
 												precoTotal = precoTotal + precos[produto]
 												produto++
+												quantidadeVendas++
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
@@ -160,6 +168,7 @@ programa
 												precos[produto] = 10.99
 												precoTotal = precoTotal + precos[produto]
 												produto++
+												quantidadeVendas++
 												escreva("\nProduto adicionado no carrinho!")
 											pare
 			
@@ -216,6 +225,8 @@ programa
 									precos[contador] = 0.0
 								}
 
+								precoVendas = precoVendas + precoTotal
+
 								precoTotal = 0.0
 								desconto = 0.0
 								produto = 0
@@ -227,10 +238,9 @@ programa
 					pare
 
 					caso 5:
-						quantidadeVendas = produto
 		
 						escreva("\nNúmero de produtos vendidos: ", quantidadeVendas)
-						escreva("\nValor total das vendas: R$ ", precoTotal)
+						escreva("\nValor total das vendas: R$ ", precoVendas)
 					pare
 				}
 			
@@ -243,7 +253,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 6065; 
+ * @POSICAO-CURSOR = 7572; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
