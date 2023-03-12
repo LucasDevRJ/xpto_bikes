@@ -6,7 +6,7 @@ programa
 	{
 		cadeia nome, produtos[3]
 		caracter formaPagamento
-		inteiro opcao, contador, codigo, quantidadeVendas, produto
+		inteiro opcao, opcaoPrincipal, contador, codigo, quantidadeVendas, produto
 		real precos[3], precoTotal, precoVendas, desconto, valor
 
 		precoTotal = 0.0
@@ -56,14 +56,14 @@ programa
 				escreva("\nOpção 2 - Solicitar serviço de manutenção.")
 				escreva("\nOpção 3 - Listar carrinho de compra.")
 				escreva("\nOpção 4 - Finalizar carrinho de compra.")
-				escreva("\nOpção 5 - Sair.")
+				escreva("\nOpção 0 - Sair.")
 				escreva("\n---------------------------------------------")
 				escreva("\nDigite sua opção desejada: ")
-				leia(opcao)
+				leia(opcaoPrincipal)
 	
-				escolha (opcao) {
+				escolha (opcaoPrincipal) {
 					caso 1:
-						enquanto (opcao != 0) {
+						faca  {
 							escreva("\n--------------------|PROMOÇÕES|--------------------")
 							escreva("\nCódigo 101 - Bicicleta nova na cor amarela, aro 26, com 18 marchas e na promoção pelo preço de R$ 999,99.")
 							escreva("\nCódigo 102 - Bicicleta usada na cor azul, aro 26, com 18 marchas e com o valor promocional de R$ 400,00.")
@@ -124,12 +124,12 @@ programa
 									escreva("\nO carrinho está cheio!!")
 								} 
 							} 
-						}
+						} enquanto (opcao != 0)
 					pare 
 		
 					caso 2:
 	
-						enquanto (opcao != 0) {
+						faca  {
 							escreva("\n--------------------|MANUTENÇÃO|--------------------")
 							escreva("\nCódigo 201 - Troca de pneu - R$ 55,99.")
 							escreva("\nCódigo 202 - Lavagem completa - R$ 12,99.")
@@ -180,7 +180,7 @@ programa
 										escreva("\nO carrinho está cheio!!")
 									}
 								} 
-							}
+							} enquanto (opcao != 0)
 						
 					pare
 		
@@ -238,13 +238,17 @@ programa
 					pare
 
 					caso 5:
-		
-						escreva("\nNúmero de produtos vendidos: ", quantidadeVendas)
-						escreva("\nValor total das vendas: R$ ", mat.arredondar(precoVendas, 2))
+						se (produto == 0) {
+							escreva("\nNúmero de produtos vendidos: ", quantidadeVendas)
+							escreva("\nValor total das vendas: R$ ", mat.arredondar(precoVendas, 2))
+						} senao {
+							escreva("\nFinalize as compras para poder sair!!")
+						}
+						
 					pare
 				}
 			
-			} enquanto (opcao != 5)
+			} enquanto (opcaoPrincipal != 0)
 		}
 	}
 }
@@ -253,7 +257,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 6685; 
+ * @POSICAO-CURSOR = 7840; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
