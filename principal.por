@@ -2,6 +2,11 @@ programa
 {
 	inclua biblioteca Matematica --> mat
 
+	
+	funcao real calculaDesconto(real valor) {
+		retorne valor - (valor * (10.0 / 100))
+	}
+
 	funcao exibeMenu() {
 		escreva("\n--------------------|MENU|--------------------")
 		escreva("\nOpção 1 - Ver promoções.")
@@ -50,11 +55,11 @@ programa
 			}
 
 			se (formaPagamento == 'D') {
-				desconto = 10.0 / 100.0
-				valor = valor - (valor * desconto)
+				valor = calculaDesconto(valor)
+				desconto = 10.0
 			}
 
-			escreva("\nDesconto: ", desconto * 100, "%")
+			escreva("\nDesconto: ", desconto, "%")
 			escreva("\nValor total: R$ ", valor)
 			
 			escreva("\n--------------------------------------------------")
@@ -188,7 +193,7 @@ programa
 							para (contador = 0; contador < 3; contador++) {
 								escreva("\nProduto: ", produtos[contador])
 								escreva("\nPreço: R$ ", mat.arredondar(precos[contador], 2))
-								escreva("\n")
+								escreva("\nProduto = ", produto)
 							}
 						
 							escreva("\n---------------------------------------------------")
@@ -209,16 +214,17 @@ programa
 							leia(opcao)
 			
 							se (opcao == 1) {
-								desconto = 10.0 / 100.0
-								precoTotal = precoTotal - (precoTotal * desconto)
+								precoTotal = calculaDesconto(precoTotal)
+								desconto = 10.0
 							}
 	
-								escreva("\nDesconto: ", desconto * 100, "%")
+								escreva("\nDesconto: ", desconto, "%")
 								escreva("\nValor total: R$ ", mat.arredondar(precoTotal, 2))
 
-								para (contador = produto; contador >= 0; contador--) {
+								para (contador = produto+1; contador < 0; contador--) {
 									produtos[contador] = ""
 									precos[contador] = 0.0
+									escreva("\nContador = ", contador)
 								}
 
 								precoVendas = precoVendas + precoTotal
@@ -250,7 +256,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1831; 
+ * @POSICAO-CURSOR = 7150; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
