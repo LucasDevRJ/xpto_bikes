@@ -15,7 +15,7 @@ Sistema de uma loja de bicicleta, onde o usuário pode comprar produtos e/ou ser
 
 ## 📁 Acesso ao projeto
 
-**Para acessar o projeto basta baixa-lo <a href="">aqui</a>.**
+**Para acessar o projeto basta baixa-lo <a href="https://github.com/LucasDevRJ/xpto_bikes/archive/refs/heads/main.zip">aqui</a>.**
 
 ## 🛠️ Abrir e rodar o projeto
 
